@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   const twiml = new VoiceResponse();
 
   twiml.say("Welcome!");
-  twiml.dial("9");
+  twiml.play({ digits: "9" }, "https://api.twilio.com/cowbell.mp3");
   twiml.say("Please enter now!");
 
   twiml.hangup();
