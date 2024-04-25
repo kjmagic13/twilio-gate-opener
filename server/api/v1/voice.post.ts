@@ -16,6 +16,9 @@ export default defineEventHandler(async (event) => {
 
   twiml.say("Welcome!");
   twiml.dial("9");
+  twiml.say("Please enter now!");
+
+  twiml.hangup();
 
   return twiml.toString();
 });
